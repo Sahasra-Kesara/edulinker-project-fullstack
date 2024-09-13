@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Portal</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/customCSS/styles.css">
+    <link rel="stylesheet" href="../css/customCSS/teacherCSS.css">
+</head>
+<body>
+<header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">Teacher Portal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#registration">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#profile-management">Availability</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#booking-management">Bookings</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<div class="container mt-5">
+    <div class="jumbotron text-center teacher-home-section">
+        <h1 class="home-h1">Welcome to the Teacher Portal</h1>
+        <p class="home-sub-heading">Manage your profile, verify your details, and handle your bookings seamlessly.</p>
+    </div>
+
+    <!-- Registration and Verification -->
+    <section id="registration" class="update-profile-section">
+        <h2 class="heading-text">Update Profile</h2>
+        <form class="gap-2">
+            <button type="submit" class="btn btn-primary float-end">Submit for Verification</button>
+            <div class="row col-12 mb-2">
+                <label for="fullName" class="col-lg-4 col-md-4 col-sm-12 col-12">Name</label>
+                <input type="text" class="form-control col-lg-8 col-md-8 col-sm-12 col-12" id="fullName" placeholder="Enter your full name">
+            </div>
+            <div class="row col-12 mb-2">
+                <label for="address" class="col-lg-4 col-md-4 col-sm-12 col-12">Address</label>
+                <input type="text" class="form-control col-lg-8 col-md-8 col-sm-12 col-12" id="address" placeholder="Enter your address">
+            </div>
+            <div class="row col-12 mb-2">
+                <label for="email" class="col-lg-4 col-md-4 col-sm-12 col-12">Email</label>
+                <input type="email" class="form-control col-lg-8 col-md-8 col-sm-12 col-12" id="email" placeholder="Enter your email">
+            </div>
+            <div class="row col-12 mb-2">
+                <label for="birthday" class="col-lg-4 col-md-4 col-sm-12 col-12">Birthday</label>
+                <input type="date" class="form-control col-lg-8 col-md-8 col-sm-12 col-12" id="birthday">
+            </div>
+            <div class="mb-2">
+                <button type="button" class="btn btn-outline-success mb-2" onclick="addNewQuaRow()">Add New Qualification</button>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Qualification</th>
+                        <th>Proof</th>
+                        <th>Remove</th>
+                    </tr>
+                    </thead>
+                    <tbody id="qualification-table" class="table-responsive">
+                    <!--will be added dynamically according to availability-->
+                    <tr>
+                        <td>Degree</td>
+                        <td><input type="file" class="form-control" name="proof[]" required></td>
+                        <td><button type="button" class="btn btn-danger" onclick="removeQuaRow(this)">Remove</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </form>
+    </section>
+
+    <!-- Profile Management -->
+    <section id="profile-management" class="mt-5 profile-management-section">
+        <h2 class="heading-text">Profile Management</h2>
+        <form>
+            <div class="form-group">
+                <label  class="sub-heading-text">Availability</label>
+                <div class="radio-input">
+                    <div class="d-flex flex-row">
+                        <label class="col-6" for="online">Online</label>
+                        <input checked="" class="col-6 input" type="radio" name="radio" id="online">
+                    </div>
+                    <div  class="d-flex flex-row">
+                        <label class="col-6" for="physical">Physical</label>
+                        <input class="col-6 input" type="radio" name="radio" id="physical">
+                    </div>
+                    <div  class="d-flex flex-row">
+                        <label class="col-6" for="hybrid">Hybrid</label>
+                        <input class="col-6 input" type="radio" name="radio" id="hybrid">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group d-flex flex-row mb-1">
+                <label class="col-lg-6" for="subjects">Subjects</label>
+                <input type="text" class="form-control col-lg-6" id="subjects" placeholder="Enter subjects you teach">
+            </div>
+            <div class="form-group d-flex flex-row mb-1">
+                <label class="col-lg-6" for="teaching-method">Teaching Method</label>
+                <select class="form-control col-lg-6" id="teaching-method">
+                    <option>Online</option>
+                    <option>In-person</option>
+                    <option>Home visits</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Update Profile</button>
+        </form>
+    </section>
+
+    <!-- Booking Management -->
+    <section id="booking-management" class="mt-5 booking-management-section">
+        <h2 class="heading-text">Booking Management</h2>
+        <form class="justify-content-center align-items-center">
+            <div class="form-group mb-1 d-flex flex-row">
+                <label for="booking-request" class="col-lg-6">Booking Requests</label>
+                <select class="form-control col-lg-6" id="booking-request">
+                    <option>Student Sirimal - Subject: Math - Date: 2024-09-01</option>
+                    <option>Student Kamal - Subject: Science - Date: 2024-09-02</option>
+                    <option>Student Amal - Subject: English - Date: 2024-09-03</option>
+                </select>
+            </div>
+            <div class="form-group mb-1 d-flex flex-row">
+                <label for="response" class="col-lg-6">Response</label>
+                <select class="form-control col-lg-6" id="response">
+                    <option>Accept</option>
+                    <option>Reject</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Response</button>
+        </form>
+    </section>
+</div>
+<div class="back-to-top-container">
+    <a href="#" class="back-to-top-a">
+        <img class="back-to-top-img" src="https://img.icons8.com/?size=100&id=CWOIOyPHEaTn&format=png&color=000000" alt="Scroll to top" class="scroll-to-top">
+    </a>
+</div>
+<footer class="text-center mt-5 py-4">
+    <p>&copy; 2024 EduLinker. All rights reserved.</p>
+</footer>
+
+<script src="../js/customJs/teacherJs.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

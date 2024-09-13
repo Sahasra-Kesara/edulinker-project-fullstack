@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Convergence&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+.heading-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #333;
+}
+
+.sub-heading-text {
+    font-family: "Convergence", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #757474;
+}
+
+.paragraph-text {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+}
+
+.landing-page {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-one-img-container {
+    background: rgb(2,0,36);
+    background: linear-gradient(300deg, rgba(2,0,36,1) 4%, rgba(9,9,121,1) 42%, rgba(0,212,255,1) 94%);
+    padding: 20px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-one-img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+}
+
+.container-one-text-container {
+    text-align: left;
+}
+
+.container-two {
+    margin-top: 40px;
+}
+
+.learning-img{
+/*    flip image vertically*/
+    transform: scaleX(-1);
+}
+
+.container-three {
+    margin-top: 40px;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h5 {
+    font-weight: 600;
+}
+
+footer p, footer li, footer a {
+    font-weight: 400;
+}
+
+.separator {
+    border-left: 1px solid #444;
+    height: auto;
+}
+
+footer h5 {
+    font-size: 1.25rem;
+    color: #e4071a; /* Dark red color for footer headers */
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+footer h5::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 50px;
+    background-color: #e4071a;
+    border-radius: 2px;
+}
+
+footer a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e4071a; /* Dark red color on hover */
+}
+
+footer p, footer li {
+    font-size: 0.95rem;
+}
+
+.container-sizing {
+    max-width: 2000px;
+    padding-inline: 50px;
+}
+
+@media (max-width: 768px) {
+    .container-sizing {
+        padding-inline: 20px;
+    }
+
+    footer h5 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-sizing {
+        padding-inline: 10px;
+    }
+
+    footer h5 {
+        font-size: 0.9rem;
+    }
+}
+
+
+

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/customCSS/styles.css">
+    <link rel="stylesheet" href="../css/customCSS/studentCSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</head>
+<body>
+<header class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Student Portal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <button type="button" class="nav-link" href="#" onclick="openTab('home')">Home</button>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="nav-link" href="#" onclick="openTab('profile')">Profile</button>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="nav-link" href="#" onclick="openTab('teachers')">Teachers</button>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="nav-link" href="#" onclick="openTab('reviews')">Reviews</button>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <div class="row recommended-card-container" id="recommended_classes">
+        <div class="col-md-3">
+            <div class="card recommended-card">
+                <div class="card-body">
+                    <h5 class="card-title">English</h5>
+                    <div class="card-img">
+                        <img src="https://dummyimage.com/200x200/000/fff&text=teacher" alt="Mathematics"
+                             class="img-fluid">
+                    </div>
+                    <p class="card-text">Improve your English skills with personalized tutoring.</p>
+                    <p class="card-footer" style="margin-top: 20px;">Grade 6 - 11</p>
+                    <p class="card-footer">By <span>Raj Rajamanoharan</span></p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Enroll now
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card recommended-card">
+                <div class="card-body">
+                    <h5 class="card-title">English</h5>
+                    <div class="card-img">
+                        <img src="https://dummyimage.com/200x200/000/fff&text=teacher" alt="Mathematics"
+                             class="img-fluid">
+                    </div>
+                    <p class="card-text">Improve your English skills with personalized tutoring.</p>
+                    <p class="card-footer" style="margin-top: 20px;">Grade 6 - 11</p>
+                    <p class="card-footer">By <span>Raj Rajamanoharan</span></p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Enroll now
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card recommended-card">
+                <div class="card-body">
+                    <h5 class="card-title">English</h5>
+                    <div class="card-img">
+                        <img src="https://dummyimage.com/200x200/000/fff&text=teacher" alt="Mathematics"
+                             class="img-fluid">
+                    </div>
+                    <p class="card-text">Improve your English skills with personalized tutoring.</p>
+                    <p class="card-footer" style="margin-top: 20px;">Grade 6 - 11</p>
+                    <p class="card-footer">By <span>Raj Rajamanoharan</span></p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Enroll now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 search-bar-container mt-2" id="search_teacher">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for classes..." class="form-control">
+            <button onclick="searchClasses()" class="btn btn-primary">Search</button>
+        </div>
+        <div class="col-12" >
+            <div id="search-results" class="row">
+                <!-- Search results will be displayed here -->
+            </div>
+        </div>
+    </div>
+    <!--profile management-->
+    <div class="student-profile-management" id="student_profile_management">
+        <h1 class="heading-text mb-3">Update Profile</h1>
+        <form action="" method="post">
+            <!--name/ address /email /birthday /prefered laguage /prefered learning method-->
+            <div class="d-flex flex-row mb-2">
+                <label for="name" class="col-lg-4 col-md-4 col-sm-12 col-12">Name:</label>
+                <input type="text" class="form-control col-lg-8 col-md-8 col-sm-12 col-12" id="name" name="name" required>
+            </div>
+            <div class="d-flex flex-row mb-2">
+                <label for="address" class="col-lg-4 col-md-4 col-sm-12 col-12">Address:</label>
+                <input type="text" class="form-control col-lg-8 col-md-8 col-sm-12 col-12" id="address" name="address"
+                       required>
+            </div>
+            <div class="d-flex flex-row mb-2">
+                <label for="email" class="col-lg-4 col-md-4 col-sm-12 col-12">Email:</label>
+                <input type="email" class="form-control col-lg-8 col-md-8 col-sm-12 col-12" id="email" name="email"
+                       required>
+            </div>
+            <div class="d-flex flex-row mb-2">
+                <label for="birthday" class="col-lg-4 col-md-4 col-sm-12 col-12">Birthday:</label>
+                <input type="date" class="form-control col-lg-8 col-md-8 col-sm-12 col-12" id="birthday" name="birthday"
+                       required>
+            </div>
+            <div class="d-flex flex-row mb-2">
+                <label for="language" class="col-lg-4 col-md-4 col-sm-12 col-12">Prefered Language:</label>
+                <select class="form-control col-lg-8 col-md-8 col-sm-12 col-12" id="language" name="language" required>
+                    <option value="english">English</option>
+                    <option value="sinhala">Sinhala</option>
+                    <option value="tamil">Tamil</option>
+                </select>
+            </div>
+            <div class="d-flex flex-row mb-2">
+                <label for="learning-method" class="col-lg-4 col-md-4 col-sm-12 col-12">Preferred Learning Method:</label>
+                <select class="form-control col-lg-8 col-md-8 col-sm-12 col-12" id="learning-method" name="learning-method"
+                        required>
+                    <option value="online">Online</option>
+                    <option value="in-person">In-Person</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <!--Booking a class model-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="heading-text">
+                        Apply for the class
+                    </h1>
+                </div>
+                <div class="modal-body">
+                    <form class="container">
+                        <!--                    mode/date/time/enroll-->
+                        <div class="row mb-2">
+                            <label for="mode" class="col-lg-4 col-md-4 col-sm-12 col-12">Mode:</label>
+                            <select class="form-control col-lg-8 col-md-8 col-sm-12 col-12" id="mode" name="mode" required>
+                                <option value="online">Online</option>
+                                <option value="in-person">In-Person</option>
+                            </select>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="date" class="col-lg-4 col-md-4 col-sm-12 col-12">Date:</label>
+                            <input type="date" class="form-control col-lg-8 col-md-8 col-sm-12 col-12" id="date" name="date"
+                                   required>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="time" class="col-lg-4 col-md-4 col-sm-12 col-12">Time:</label>
+                            <input type="time" class="form-control col-lg-8 col-md-8 col-sm-12 col-12" id="time" name="time"
+                                   required>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--add a review to teacher-->
+    <div class="add-review-container" id="add_review">
+        <h1 class="heading-text">Add a Review</h1>
+        <div class="container-fluid">
+            <!-- |image|   theachers name        |heart(save to favourite)|
+             |stars|   review text box       |submit button|-->
+
+            <div class="teacher-card">
+                <div class="col-lg-3">
+                    <img src="https://dummyimage.com/200x200/000/fff&text=teacher" alt="teacher" class="img-fluid">
+                    <div class="star-container">
+                        <div class="radio-input">
+                            <input
+                                    class="star s1"
+                                    type="radio"
+                                    id="value-1"
+                                    name="value-radio"
+                                    value="value-1"
+                            />
+                            <input
+                                    class="star s2"
+                                    type="radio"
+                                    id="value-2"
+                                    name="value-radio"
+                                    value="value-2"
+                            />
+                            <input
+                                    class="star s3"
+                                    type="radio"
+                                    id="value-3"
+                                    name="value-radio"
+                                    value="value-3"
+                            />
+                            <input
+                                    class="star s4"
+                                    type="radio"
+                                    id="value-4"
+                                    name="value-radio"
+                                    value="value-4"
+                            />
+                            <input
+                                    class="star s5"
+                                    type="radio"
+                                    id="value-5"
+                                    name="value-radio"
+                                    value="value-5"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <p>Raj Rajamanoharan</p>
+                    <textarea name="review" id="review" cols="20" rows="5" class="form-control"></textarea>
+
+                </div>
+                <div>
+                    <div class="like-button-container">
+                        <button class="Btn">
+                        <span class="leftContainer">
+                            <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+                            <span class="like">Like</span>
+                        </span>
+                            <span class="likeCount">2,050</span>
+                        </button>
+                    </div>
+                    <div class="">
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="teacher-card">
+                <div class="col-lg-3">
+                    <img src="https://dummyimage.com/200x200/000/fff&text=teacher" alt="teacher" class="img-fluid">
+                    <div class="star-container">
+                        <div class="radio-input">
+                            <input class="star s1" type="radio" id="rating-1" name="rating-radio" value="rating-1" />
+                            <input class="star s2" type="radio" id="rating-2" name="rating-radio" value="rating-2" />
+                            <input class="star s3" type="radio" id="rating-3" name="rating-radio" value="rating-3" />
+                            <input class="star s4" type="radio" id="rating-4" name="rating-radio" value="rating-4" />
+                            <input class="star s5" type="radio" id="rating-5" name="rating-radio" value="rating-5" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <p>Teacher Name</p>
+                    <textarea name="teacher-review" id="teacher-review" cols="20" rows="5" class="form-control"></textarea>
+                </div>
+                <div>
+                    <div class="like-button-container">
+                        <button class="Btn">
+                <span class="leftContainer">
+                    <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+                    <span class="like">Like</span>
+                </span>
+                            <span class="likeCount">2,050</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--Footer-->
+<footer class="container-fluid bg-dark text-white py-3 border-top bottom-0 container-sizing"
+        style="margin-top: 85px;">
+    <div class="row">
+        <div class="col text-center">
+            <!--            Add a logo image here I dont know what to insert -->
+            <p><img src="public/assets/images/logo.png" height="75" alt="edulinker logo"></p>
+        </div>
+    </div>
+
+    <div class="row text-center py-2">
+        <div class="col">
+            <ul class="list-unstyled d-flex justify-content-center">
+                <li><a href="#" class="me-3">Home</a></li>
+                <li><a href="#" class="me-3">About</a></li>
+                <li><a href="#" class="me-3">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row text-center py-2">
+        <div class="col">
+            <ul class="list-unstyled d-flex justify-content-center">
+                <li><a href="#" class="me-3"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="#" class="me-3"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="#" class="me-3"><i class="bi bi-youtube"></i></a></li>
+                <li><a href="#" class="me-3"><i class="bi bi-twitter"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row flex-lg-nowrap flex-md-wrap flex-wrap ">
+        <div class="col-md-3 separator">
+            <h5>EduLinker</h5>
+            <p>EduLinker is a web application that has been developed to connect students of Sri
+                Lanka with professional tutors. The platform enables students to readily identify the
+                teachers in their subjects of concern for the Sri Lankan government school syllabus
+                from grade 6 up to A/L. Due to the constant increase in the interest of the students
+                towards online classes as well as seeking personal tutors, EduLinker provides one stop
+                solution to the study needs of the students. The platform is designed in a way that
+                guarantees effectiveness even when students have to learn online through the sessions
+                or get a tutor to attend their residence for in-person instruction.</p>
+        </div>
+
+        <div class="col-md-3 separator">
+            <h5>Contact</h5>
+            <ul class="list-unstyled">
+                <li><a href="#">Hotline : 011rest</a></li>
+                <li><a href="#">Email : contact&#64;edulink.lk</a></li>
+                <li><a href="#">Whatsapp : 076rest</a></li>
+                <li><a href="#">#58,that street,Galle</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3 separator">
+            <h5>Resources</h5>
+            <ul class="list-unstyled">
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-2 separator">
+            <h5>Other Services</h5>
+            <ul class="list-unstyled">
+                <li><a href="#">Can remove if not needed</a></li>
+                <li><a href="#">Can remove if not needed</a></li>
+                <li><a href="#">Can remove if not needed</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="row text-center py-2">
+        <div class="col d-flex justify-content-center">
+            <a href="#" class="me-3"><i class="bi bi-android2"></i></a>
+            <a href="#"><i class="bi bi-apple"></i></a>
+        </div>
+    </div>
+
+    <div class="text-center pb-5">
+        <p>&copy; 2024 EduLinker. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="../js/customJs/studentJs.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+</html>

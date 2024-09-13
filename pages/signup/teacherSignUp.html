@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLinker - Teacher Sign Up</title>
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/customCSS/styles.css">
+    <link rel="stylesheet" href="../../css/customCSS/teacherSignUp.css">
+</head>
+<body>
+<div class="signup-container justify-content-center align-items-center ">
+    <div class="stepper">
+        <div class="step active">
+            <div class="circle">1</div>
+            <div class="label">Personal Information</div>
+        </div>
+        <div class="step">
+            <div class="circle">2</div>
+            <div class="label">Qualifications</div>
+        </div>
+        <div class="step">
+            <div class="circle">3</div>
+            <div class="label">Account Status</div>
+        </div>
+    </div>
+
+    <div class="form-step active" id="step-1">
+        <h2 class="heading-text text-center">Personal Information</h2>
+        <form>
+            <label for="name" class="sub-heading-text">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address" class="sub-heading-text">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="email" class="sub-heading-text">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password" class="sub-heading-text">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="birthday" class="sub-heading-text">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" required>
+
+            <button type="button" onclick="nextStep(2)" class="paragraph-text">Next</button>
+        </form>
+    </div>
+
+    <div class="form-step" id="step-2">
+        <h2 class="heading-text text-center">Qualifications</h2>
+        <form>
+            <label for="qualifications" class="sub-heading-text">Qualifications:</label>
+            <input type="text" id="qualifications" name="qualifications" required>
+
+            <label for="proof" class="sub-heading-text">Upload Proof of Qualifications:</label>
+            <input type="file" id="proof" name="proof" required>
+
+            <label class="sub-heading-text">Preferred Teaching Method:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="teaching-method" value="physical"> Physical</label>
+                <label><input type="checkbox" name="teaching-method" value="online"> Online</label>
+                <label><input type="checkbox" name="teaching-method" value="hybrid"> Hybrid</label>
+            </div>
+
+            <button type="button" onclick="prevStep(1)" class="paragraph-text">Previous</button>
+            <button type="button" onclick="nextStep(3)" class="paragraph-text">Next</button>
+        </form>
+    </div>
+
+    <div class="form-step" id="step-3">
+        <h2 class="heading-text text-center">Account Status</h2>
+        <p class="paragraph-text">Account creation status will be displayed here.</p>
+        <button type="button" onclick="prevStep(2)" class="paragraph-text">Previous</button>
+        <button type="submit" class="paragraph-text">Submit</button>
+    </div>
+
+
+</div>
+<script src="../../js/bootstrap.js"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script src="../../js/customJs/teacherSignUp.js"></script>
+</body>
+</html>

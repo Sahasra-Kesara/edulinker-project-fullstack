@@ -1,0 +1,257 @@
+.recommended-card-container{
+    background-color: #0a58ca;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.recommended-card {
+    background-color: #f8f9fa; /* Light grey background */
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.recommended-card .card-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #333;
+}
+
+.recommended-card .card-text {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
+}
+
+.recommended-card .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.recommended-card .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.search-bar-container{
+    background-color: #329300;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 70%;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    width: 20%;
+}
+
+.search-result-card {
+    background-color: #f8f9fa; /* Light grey background */
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.search-result-card .card-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #333;
+}
+
+.search-result-card .card-text {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
+}
+
+.search-result-card .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.search-result-card .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.student-profile-management{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+}
+
+.add-review-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+
+}
+.teacher-card-holder{
+    display: flex;
+    flex-direction: row;
+
+}
+.teacher-card{
+    background-color: #f8f9fa; /* Light grey background */
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+
+}
+
+
+/*like button*/
+/* From Uiverse.io by vinodjangid07 */
+.Btn {
+    width: 140px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.089);
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.leftContainer {
+    width: 60%;
+    height: 100%;
+    background-color: rgb(238, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.leftContainer .like {
+    color: white;
+    font-weight: 600;
+}
+
+.likeCount {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(238, 0, 0);
+    font-weight: 600;
+    position: relative;
+    background-color: white;
+}
+
+.likeCount::before {
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    content: "";
+    background-color: rgb(255, 255, 255);
+    transform: rotate(45deg);
+    left: -4px;
+}
+
+.Btn:hover .leftContainer {
+    background-color: rgb(219, 0, 0);
+}
+
+.Btn:active .leftContainer {
+    background-color: rgb(201, 0, 0);
+}
+
+.Btn:active .leftContainer svg {
+    transform: scale(1.15);
+    transform-origin: top;
+}
+/*like button over*/
+
+/*start rating*/
+/* From Uiverse.io by Ratinax */
+.radio-input {
+    display: flex;
+    scale: 0.15;
+    transform: rotate(180deg);
+}
+
+.star {
+    margin: 1em;
+    appearance: none;
+    --color: #938e6d;
+    border-left: 6.4721359549996em solid transparent;
+    border-right: 6.4721359549996em solid transparent;
+    border-bottom: 4em solid var(--color);
+    transform: rotate(0deg);
+    cursor: pointer;
+}
+
+.star:before {
+    content: "";
+    border-left: 6.4721359549996em solid transparent;
+    border-right: 6.4721359549996em solid transparent;
+    border-top: 4em solid var(--color);
+    position: absolute;
+    left: -6.4721359549996em;
+    transform: rotate(108deg);
+}
+
+.star:after {
+    content: "";
+    border-left: 6.4721359549996em solid transparent;
+    border-right: 6.4721359549996em solid transparent;
+    border-top: 4em solid var(--color);
+    position: absolute;
+    left: -6.4721359549996em;
+    transform: rotate(253deg);
+}
+
+.radio-input > .star:hover ~ .star,
+.radio-input > .star:hover,
+.radio-input > .star:checked ~ .star,
+.radio-input > .star:checked {
+    --color: yellow;
+}
+
+.radio-input > .star:checked ~ .star,
+.radio-input > .star:checked {
+    animation: grow 0.5s linear forwards;
+    transition: transform 0.3s;
+}
+
+@keyframes grow {
+    50% {
+        scale: 2;
+    }
+}
+/*star ratings over*/
+.star-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

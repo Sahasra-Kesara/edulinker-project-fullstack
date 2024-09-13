@@ -1,0 +1,128 @@
+.teacher-home-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    background-image: url("https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/file-teaching-skills-1605625101.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.home-h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.home-sub-heading{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.update-profile-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+
+.profile-management-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* From Uiverse.io by adeladel522 */
+.input {
+    -webkit-appearance: none;
+    /* remove default */
+    display: block;
+    margin: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    vertical-align: middle;
+    box-shadow: hsla(0,0%,100%,.15) 0 1px 1px, inset hsla(0,0%,0%,.5) 0 0 0 1px;
+    background-color: hsla(0,0%,0%,.2);
+    background-image: -webkit-radial-gradient( hsla(200,100%,90%,1) 0%, hsla(200,100%,70%,1) 15%, hsla(200,100%,60%,.3) 28%, hsla(200,100%,30%,0) 70% );
+    background-repeat: no-repeat;
+    -webkit-transition: background-position .15s cubic-bezier(.8, 0, 1, 1),
+    -webkit-transform .25s cubic-bezier(.8, 0, 1, 1);
+    outline: none;
+}
+
+.input:checked {
+    -webkit-transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1),
+    -webkit-transform .25s cubic-bezier(0, 0, .2, 1);
+}
+
+.input:active {
+    -webkit-transform: scale(1.5);
+    -webkit-transition: -webkit-transform .1s cubic-bezier(0, 0, .2, 1);
+}
+
+
+
+/* The up/down direction logic */
+
+.input,
+.input:active {
+    background-position: 0 24px;
+}
+
+.input:checked {
+    background-position: 0 0;
+}
+
+.input:checked ~ .input,
+.input:checked ~ .input:active {
+    background-position: 0 -24px;
+}
+
+
+.booking-management-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.back-to-top-container{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.back-to-top-a{
+    text-decoration: none;
+    color: black;
+}
+.back-to-top-img{
+    width: 30px;
+    height: 30px;
+}

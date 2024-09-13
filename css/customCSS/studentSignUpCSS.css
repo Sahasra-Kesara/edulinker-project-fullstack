@@ -1,0 +1,89 @@
+@import "css/customCSS/styles.css";
+
+.stepper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+}
+
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    z-index: -1;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.label {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.step.active .circle {
+    border-color: #007bff;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

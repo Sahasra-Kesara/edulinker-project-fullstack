@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/customCSS/styles.css">
+    <link rel="stylesheet" href="../css/customCSS/adminCSS.css">
+</head>
+<body>
+<header class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Admin Portal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">User Management</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Verification</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Reports</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<div class="container mt-5">
+    <div class="jumbotron text-center">
+        <h1>Welcome to the Admin Portal</h1>
+        <p>Manage users, verify teacher credentials, and analyze platform performance.</p>
+    </div>
+
+    <!-- User and Content Management -->
+    <section id="user-management">
+        <h2>User and Content Management</h2>
+        <form>
+            <div class="form-group">
+                <label for="user-select">Select User</label>
+                <select class="form-control" id="user-select">
+                    <option>User A</option>
+                    <option>User B</option>
+                    <option>User C</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="user-actions">Actions</label>
+                <select class="form-control" id="user-actions">
+                    <option>Suspend User</option>
+                    <option>Delete User</option>
+                    <option>Edit User Profile</option>
+                    <option>Moderate Content</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Execute Action</button>
+        </form>
+    </section>
+
+    <!-- Verification Process -->
+    <section id="verification" class="mt-5">
+        <h2>Verification Process</h2>
+        <form>
+            <div class="form-group">
+                <label for="teacher-select">Select Teacher</label>
+                <select class="form-control" id="teacher-select">
+                    <option>Teacher A</option>
+                    <option>Teacher B</option>
+                    <option>Teacher C</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="verification-status">Verification Status</label>
+                <select class="form-control" id="verification-status">
+                    <option>Approve</option>
+                    <option>Reject</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Verification</button>
+        </form>
+    </section>
+
+    <!-- Reporting and Analytics -->
+    <section id="reports" class="mt-5">
+        <h2>Reporting and Analytics</h2>
+        <form>
+            <div class="form-group">
+                <label for="report-type">Select Report Type</label>
+                <select class="form-control" id="report-type">
+                    <option>User Activity</option>
+                    <option>Booking History</option>
+                    <option>Feedback and Ratings</option>
+                    <option>Platform Performance</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Report</button>
+        </form>
+    </section>
+</div>
+
+<footer class="text-center mt-5 py-4 bg-dark text-white">
+    <p>&copy; 2024 Admin Portal. All rights reserved.</p>
+</footer>
+
+<script src="../js/customJs/adminJS.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
